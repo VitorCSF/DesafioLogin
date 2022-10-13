@@ -1,0 +1,58 @@
+:root {
+
+    --cor-primaria: #E0E0E0;
+    --cor-secundaria: #222222;
+    --cor-branca: #FFFFFF;
+    --cor-amarela: #E9B425;
+    --cor-vermelha: #C12D18;
+    --fonte-nunito: 'Nunito', sans-serif;
+    --fonte-poppins: 'Poppins', sans-serif;
+
+}
+
+body {
+
+    color: var(--cor-primaria);
+    background-color: black;
+    font-weight: 400;
+    font-size: 16px;
+
+}
+
+.scroll__login {
+
+    overflow-x: hidden;
+    overflow-y: hidden;
+
+} 
+
+.alinhamento__login {
+
+    padding-left: 12.5vw;
+    padding-top: 8vw;
+
+}
+
+.titulo__login {
+
+    font-family: var(--fonte-poppins);
+    font-size: 60px;
+
+}
+
+.texto__login {
+
+    font-family: var(--fonte-poppins);
+
+}
+
+.imagem__login {
+
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    width: 50vw;
+    height: 50vw;
+
+}
