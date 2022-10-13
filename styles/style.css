@@ -1,7 +1,11 @@
+/* Declaração de Variáveis Raiz */
+
 :root {
 
     --cor-primaria: #E0E0E0;
     --cor-secundaria: #222222;
+    --degrade-preto: linear-gradient(180deg, #33383D 0%, #1C1D20 100%);
+    --degrade-vermelho: linear-gradient(90deg, #FF2D04 0%, #C13216 100%);
     --cor-branca: #FFFFFF;
     --cor-amarela: #E9B425;
     --cor-vermelha: #C12D18;
@@ -10,12 +14,23 @@
 
 }
 
+/* Propriedades gerais do Body */
+
+
 body {
 
     color: var(--cor-primaria);
-    background-color: black;
     font-weight: 400;
     font-size: 16px;
+
+}
+
+/* Customização da Página, no geral */
+
+
+.cor-de-fundo__login {
+
+    background-image: var(--degrade-preto);
 
 }
 
@@ -29,9 +44,11 @@ body {
 .alinhamento__login {
 
     padding-left: 12.5vw;
-    padding-top: 8vw;
+    padding-top: 7vw;
 
 }
+
+/* Estilo do Titulo e Texto do Login */
 
 .titulo__login {
 
@@ -46,6 +63,8 @@ body {
 
 }
 
+/* Customização da Imagem do lado Direito */
+
 .imagem__login {
 
     position: absolute;
@@ -54,5 +73,81 @@ body {
     right: 0;
     width: 50vw;
     height: 50vw;
+
+}
+
+/* Propriedades do input */
+
+input {
+
+    width: 379px;
+    height: 60px;
+    background: transparent;
+    border-radius: 50px;
+    border: 1px solid var(--cor-branca);
+    color: var(--cor-primaria);
+
+}
+
+input::placeholder {
+
+    color: var(--cor-primaria);
+  
+}
+
+input:focus::-webkit-input-placeholder {
+
+    color: transparent;
+
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:focus {
+  transition: background-color 600000s 0s, color 600000s 0s;
+}
+
+/* Customizando todo o Formulário e Ícones */
+
+.margem__superior-form {
+
+    margin-top: 7em;
+    
+}
+
+.rotulo__login {
+
+
+    font-family: var(--fonte-poppins);
+    font-size: 30px;
+
+}
+
+.tamanho__icone {
+
+    margin-left: .5em;
+    width: 20px;
+    height: 20px;
+
+}
+
+.espacamento__texto {
+
+    padding-left: 1em;
+
+}
+
+.margem__botao {
+
+    margin-top: 5em;
+    margin-bottom: 2.8em;
+
+}
+
+.custom__botao-continuar {
+
+    border: 3px solid var(--cor-vermelha);
+    background-image: var(--degrade-vermelho);
+    font-weight: bold;
+    font-family: var(--fonte-poppins);
 
 }
