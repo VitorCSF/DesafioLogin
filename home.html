@@ -16,7 +16,7 @@
 
 </head>
 
-<body>
+<body class="scroll__home">
 
     <header>
 
@@ -28,7 +28,7 @@
 
                     <figure>
 
-                        <img src="./img/Logo_Compasso.svg" alt="Logo da Compass">
+                        <img src="./img/Logo_Compasso.svg" alt="Logo da Compass" class="logo__compass">
 
                     </figure>
 
@@ -36,19 +36,19 @@
 
                 <div class="col">
 
-                    <time>
+                    <time class="estilo__dia-cabecalho">
 
-                        <p>
+                        <div class="estilo__horario">
 
                             11:26
                         
-                        </p>
+                        </div>
 
-                        <p>
+                        <div class="estilo__data">
                             
                             terça-feira, 17 de março de 2020
                         
-                        </p>
+                        </div>
 
                     </time>
 
@@ -56,17 +56,21 @@
                 
                 <div class="col">
 
-                    <p>
+                    <div class="estilo__local-tempo">
 
-                        Passo Fundo - RS
+                        <div class="estilo__localizacao">
 
-                    </p>
+                            Passo Fundo - RS
 
-                    <p>
+                        </div>
 
-                        22º
+                        <div class="estilo__tempo">
 
-                    </p>
+                            22º
+
+                        </div>
+
+                    </div>    
 
                 </div>
 
@@ -78,91 +82,114 @@
 
     <main>
 
-        <div>
+        <div class="row">
 
-            <div class="row">
+            <div class="col">
 
-              <div class="col">
+                <figure>
 
-                <img src="./img/Bola_Compasso.png" alt="Bola Compass">
+                    <img src="./img/Bola_Compasso.png" alt="Bola Compass" class="bola__compass">
 
-              </div>
-
-              <div class="col">
-
-                <p>
-
-                    Our mission is
-
-                    <br>
-
-                    Nossa missão é
-
-                </p>
-
-                <p>
-
-                    to transform the world
-
-                    <br>
-
-                    transformar o mundo
-
-                </p>
-
-                <p>
-
-                    building digital experiences
-
-                    <br>
-
-                    construindo experiências digitais
-
-                </p>
-
-                <p>
-
-                    that enable our client’s growth
-
-                    <br>
-
-                    que permitam o crescimento dos nossos clientes
-
-
-                </p>
-                
-              </div>
+                </figure>    
 
             </div>
+
+            <div class="col">
+
+                <article>
+
+                    <h2 class="titulo__h2">
+
+                        Our mission is
+
+                    </h2>
+                    
+                    <p class="paragrafo__geral paragrafo__missao">
+
+                        Nossa missão é
+
+                    </p>
+
+                    <h1 class="h1__geral titulo__transformar">
+
+                        to transform the world
+
+                    </h1>
+
+                    <p class="paragrafo__geral paragrafo__transformar">
+
+                        transformar o mundo
+
+                    </p>
+
+                    <h1 class="h1__geral titulo__construindo">
+
+                        building digital experiences
+
+                    </h1>
+
+                    <p class="paragrafo__geral paragrafo__construindo">
+
+                        construindo experiências digitais
+
+                    </p>
+
+                    <h1 class="h1__geral titulo__que-permitam">
+
+                        that enable our client’s growth
+
+                    </h1>
+
+                    <p class="paragrafo__geral paragrafo__que-permitam">
+
+                        que permitam o crescimento dos nossos clientes
+
+                    </p>
+
+                </article>    
+
+            </div>       
+                
+        </div>     
 
     </main>
 
     <footer>
 
-        <div class="text-center">
+        <div class="estilo__rodape">
 
-            <div class="row">
+            <div class="text-center">
 
-                <div class="col">
+                <div class="row">
 
-                    <article>
+                    <div class="col">
 
-                        <p>
-                            
-                            Essa janela do navegador é usada para manter sua sessão de autenticação ativa. Deixe-a 
-                            aberta em segundo plano e abra uma nova janela para continuar a navegar.
+                        <div class="texto">
 
-                        </p>
+                            <article>
 
-                    </article>    
+                                <p class="paragrafo__rodape">
+                                    
+                                    Essa janela do navegador é usada para manter sua sessão de autenticação ativa. Deixe-a
+                                    
+                                    <br>
 
-                </div>
 
-                <div class="col">
+                                    aberta em segundo plano e abra uma nova janela para continuar a navegar.
 
-                    <div>
+                                </p>
 
-                        <p>
+                            </article>
+
+                            <div class="borda__rodape"></div>
+                        
+                        </div>    
+
+                    </div>
+
+                    <div class="col">
+
+                        <p class="texto__contador">
                                 
                             Application 
 
@@ -172,41 +199,43 @@
                         
                         </p>
 
-                        <time>
+                        <time class="contador">
 
                             600
 
                         </time>
 
-                        <p>
+                        <br>
+
+                        <p class="contagem__segundos">
 
                             seconds
 
                         </p>
 
                     </div>
-
-                </div>
-                
-                <div class="col">
-
-                    <button>
-                        
-                        Continuar Navegando
                     
-                    </button>
+                    <div class="col">
 
-                    <button>
+                        <button class="botao__navegando" id="navegar">
+                            
+                            Continuar Navegando
                         
-                        Logout
-                    
-                    </button>
+                        </button>
+
+                        <button class="botao__logout" id="logout">
+                            
+                            Logout
+                        
+                        </button>
+
+                    </div>
 
                 </div>
 
             </div>
 
-        </div>
+        </div>    
 
     </footer>
     
