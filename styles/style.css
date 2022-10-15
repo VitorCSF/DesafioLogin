@@ -188,9 +188,13 @@ input:-webkit-autofill:focus {
     font-family: var(--fonte-poppins);
     font-style: normal;
     font-weight: 700;
-    font-size: 115px;
+    font-size: 120px;
     line-height: 183px;
     text-align: center;
+    position: absolute;
+    top: 2vw;
+    left: 38vw;
+    height: 100px;
 
 }
 
@@ -199,11 +203,13 @@ input:-webkit-autofill:focus {
     color: var(--cor-secundaria);
     font-family: var(--fonte-poppins);
     font-style: normal;
-    font-size: 13px;
     line-height: 18px;
     position: absolute;
-    top: 9.2vw;
-    left: 43vw;
+    text-align: center;
+    font-size: 14px;
+    top: 7.2vw;
+    left: 37.9vw;
+    border: none;
 
 }
 
@@ -266,13 +272,12 @@ input:-webkit-autofill:focus {
 
     position: absolute; 
     left: 79vw;
-    top: 15vw;
+    top: 17vw;
 
     font-family: var(--fonte-poppins);
     font-style: normal;
     font-size: 25px;
     font-weight: 700;
-    line-height: 46px;
     text-align: right;
     color: var(--cor-vermelha);
 
@@ -286,7 +291,6 @@ input:-webkit-autofill:focus {
     font-style: normal;
     font-weight: 700;
     font-size: 32px;
-    line-height: 81px;
     text-align: right;
     color: var(--cor-vermelha);
 
@@ -299,7 +303,6 @@ input:-webkit-autofill:focus {
     font-style: normal;
     font-weight: 400;
     font-size: 15px;
-    line-height: 30px;
     text-align: right;
     color: var(--cor-secundaria);
 
@@ -311,49 +314,49 @@ input:-webkit-autofill:focus {
 
     position: absolute;
     left: 83vw;
-    top: 17vw;
+    top: 19vw;
 
 }
 
 .titulo__transformar {
 
     left: 66.8vw;
-    top: 17.3vw;
+    top: 20.5vw;
 
 }
 
 .paragrafo__transformar {
 
     left: 80.2vw;
-    top: 20.9vw;
+    top: 22.8vw;
 
 }
 
 .titulo__construindo {
 
     left: 61.1vw;
-    top: 21.5vw;
+    top: 24.5vw;
 
 }
 
 .paragrafo__construindo {
 
     left: 74.7vw;
-    top: 25.4vw;
+    top: 26.8vw;
 
 }
 
 .titulo__que-permitam {
 
     left: 58vw;
-    top: 26vw;
+    top: 28.5vw;
 
 }
 
 .paragrafo__que-permitam {
 
     left: 66.8vw;
-    top: 29.8vw;
+    top: 30.8vw;
 
 }
 
@@ -428,15 +431,14 @@ input:-webkit-autofill:focus {
     width: 97px;
     height: 61px;
     left: 60.5vw;
-    top: 0;
 
     font-family: var(--fonte-poppins);
     font-style: normal;
     font-weight: 700;
     font-size: 35px;
-    line-height: 61px;
     text-align: center;
     color: #FFFFFF;
+    border: none;
 
 }
 
@@ -445,8 +447,8 @@ input:-webkit-autofill:focus {
     position: absolute;
     width: 55px;
     height: 18px;
-    left: 61.8vw;
-    top: 4.3em;
+    left: 61.9vw;
+    top: 4em;
 
     font-family: var(--fonte-poppins);
     font-style: normal;
