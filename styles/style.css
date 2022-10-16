@@ -7,6 +7,7 @@
     --degrade-preto: linear-gradient(180deg, #33383D 0%, #1C1D20 100%);
     --degrade-vermelho: linear-gradient(90deg, #FF2D04 0%, #C13216 100%);
     --degrade-preto-azulado: linear-gradient(90.16deg, #33383D 0%, #1C1D20 100%);
+    --degrade-cinza: linear-gradient(105.96deg, #FFFFFF 0%, #F0F0F0 97.86%);
     --cor-branca: #FFFFFF;
     --cor-amarela: #E9B425;
     --cor-vermelha: #C12D18;
@@ -55,13 +56,14 @@ body {
 .titulo__login {
 
     font-family: var(--fonte-poppins);
-    font-size: 60px;
+    font-size: 50px;
 
 }
 
 .texto__login {
 
     font-family: var(--fonte-poppins);
+    font-size: 14px;
 
 }
 
@@ -120,7 +122,7 @@ input:-webkit-autofill:focus {
 
 
     font-family: var(--fonte-poppins);
-    font-size: 30px;
+    font-size: 25px;
 
 }
 
@@ -141,7 +143,7 @@ input:-webkit-autofill:focus {
 .margem__botao {
 
     margin-top: 5em;
-    margin-bottom: 2.8em;
+    margin-bottom: 4.4em;
 
 }
 
@@ -195,6 +197,7 @@ input:-webkit-autofill:focus {
     top: 2vw;
     left: 38vw;
     height: 100px;
+    border: none;
 
 }
 
@@ -218,6 +221,9 @@ input:-webkit-autofill:focus {
 .scroll__home {
 
    overflow: hidden;
+   background-image: var(--cor-primaria);
+   box-shadow: 4px 4px 70px rgba(0, 0, 0, 0.25);
+   height:0;
 
 }
 
@@ -244,13 +250,16 @@ input:-webkit-autofill:focus {
 
 .estilo__tempo {
 
-    font-family: var(--fonte-nunito);
+    font-family: var(--fonte-poppins);
     font-style: normal;
     font-weight: 700;
-    font-size: 48px;
+    font-size: 55px;
     line-height: 61px;
     text-align: center;
     color: var(--cor-secundaria);
+    position: absolute;
+    right: 0.1vw;
+    top: .4em;
 
 }
 
@@ -513,5 +522,37 @@ input:-webkit-autofill:focus {
 
     background-color: var(--cor-branca);
     color: var(--cor-de-texto-vermelha);
+
+}
+
+.weather{
+    display: none;
+    font-size: 32px;
+}
+
+.low-high {
+    display: none;
+    font-size: 22px;
+}
+
+.container-img {
+
+    position: absolute;
+    top: 0;
+
+}
+
+.container-temp {
+
+    display: flex;
+
+}
+
+.imagem-tempo {
+
+    width: 50px;
+    position: absolute;
+    right: .2em;
+    top: 1.5em;
 
 }

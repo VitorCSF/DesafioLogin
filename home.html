@@ -13,12 +13,10 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Nunito&family=Poppins:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./styles/style.css">
-    <script type="text/javascript"src="./scripts/principal.js"></script>
-    
 
 </head>
 
-<body class="scroll__home">
+<body onload="mostraDia()" class="scroll__home">
 
     <header>
 
@@ -40,25 +38,9 @@
 
                     <time>
 
-                        <input type="text" id="hora" class="estilo__horario" disabled>
-                    
-                            <script>
+                        <input type="text" id="hora" class="estilo__horario" disabled></input>
 
-                                mostraHora();
-
-                            </script>
-
-                        </input>
-
-                        <input type="text" id="data" class="estilo__data" disabled>
-                    
-                            <script>
-
-                                mostraDia();
-
-                            </script>                                
-                        
-                        </input>
+                        <input type="text" id="data" class="estilo__data" disabled></input>
 
                     </time>
 
@@ -70,13 +52,24 @@
 
                         <div class="estilo__localizacao">
 
-                            Passo Fundo - RS
+                            <div class="cidade"></div>
 
-                        </div>
-
+                        </div>    
+                
                         <div class="estilo__tempo">
 
-                            22º
+                            <div class="container-temp">
+
+                                <div></div>
+                                <span></span>
+
+                            </div>
+
+                        </div>    
+                            
+                        <div class="container-img">
+
+                            <img>
 
                         </div>
 
@@ -211,15 +204,7 @@
 
                         <time>
 
-                            <input type="text" id="contando"  class="contador" disabled>
-
-                                <script>
-
-                                    mostraContador();
-
-                                </script>
-
-                            </input>
+                            <input type="text" id="contando"  class="contador" disabled></input>
 
                         </time>
 
@@ -235,13 +220,13 @@
                     
                     <div class="col">
 
-                        <button onclick="continuarNavegando()" class="botao__navegando" id="navegar">
+                        <button onclick="continueNavegando()" class="botao__navegando" id="navegar">
                             
                             Continuar Navegando
                         
                         </button>
 
-                        <button onclick="fazerLogout()" class="botao__logout" id="logout">
+                        <button onclick="logout()" class="botao__logout" id="logout">
                             
                             Logout
                         
@@ -257,8 +242,7 @@
 
     </footer>
     
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" 
-    integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+    <script src="./scripts/principal.js"></script>
 
 </body>
 </html>

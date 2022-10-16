@@ -1,6 +1,22 @@
 // Variáveis fora de Função
 
-contador = 600 + 1;
+const api = {
+
+    key: "d4e0cf6f6b30830f37ee58a2a22eac18",
+    base: "https://api.openweathermap.org/data/2.5/",
+    lang: "pt_br",
+    units: "metric"
+
+}
+
+const cidade = document.querySelector('.cidade')
+const container_img = document.querySelector('.container-img');
+const container_temp = document.querySelector('.container-temp');
+const temp_number = document.querySelector('.container-temp div');
+const temp_unit = document.querySelector('.container-temp span');
+const weather_t = document.querySelector('.weather');
+
+var contador = 600 + 1;
 
 // Função para mostrar a hora(s) e minuto(s) na tela 
 
@@ -43,7 +59,7 @@ function mostraHora() {
 
     // Guarda cada pedaço em uma variável
 
-    var semana = new Array('segunda-feira', 'terça-feira', 'quarta-feira', 'quinta-feira', 'sexta-feira', 'sábado', 'domingo');
+    var semana = new Array('domingo', 'segunda-feira', 'terça-feira', 'quarta-feira', 'quinta-feira', 'sábado');
 
     var dia = data.getDate(); // Guarda o dia 
 
@@ -53,13 +69,15 @@ function mostraHora() {
 
     // Formata o dia da semana, dia, mês e ano 
 
-    var str_data = semana[data.getDay() - 1] + ', ' + dia + ' de ' + mes[data.getMonth()] + ' de ' + ano;
+    var str_data = semana[data.getDay()] + ', ' + dia + ' de ' + mes[data.getMonth()] + ' de ' + ano;
 
     // Mostra o resultado de str_data
 
     document.getElementById("data").value=str_data;
 
 }
+
+//
   
  function mostraContador(){
 
@@ -69,10 +87,153 @@ function mostraHora() {
 
         clearInterval(timerContador);
 
+        if (window.confirm("Tempo limite excedido! Clique OK para voltar ao Login ou Cancelar para recarregar a página") == true) {
+
+            window.location ="index.html";
+
+        } else {
+
+            location.reload();
+
+        }
+
     }
 
     document.getElementById("contando").value=contador;
 
 }
 
+//
+
 var timerContador = setInterval(mostraContador, 1000);
+
+window.addEventListener('load', () => {
+
+    if (navigator.geolocation) {
+
+        navigator.geolocation.getCurrentPosition(configuraPosicao, mostraErro);
+
+    }
+
+    else {
+
+        alert('Navegador não suporta Geolocalização');
+
+    }
+
+    function configuraPosicao(position) {
+
+        console.log(position)
+        let lat = position.coords.latitude;
+        let long = position.coords.longitude;
+        resultadosCoordenadas(lat, long);
+
+    }
+
+    function mostraErro(error) {
+
+        alert(`erro: ${error.message}`);
+
+    }
+})
+
+function resultadosCoordenadas(lat, long) {
+
+    fetch(`${api.base}weather?lat=${lat}&lon=${long}&lang=${api.lang}&units=${api.units}&APPID=${api.key}`)
+        .then(response => {
+
+            if (!response.ok) {
+                throw new Error(`http error: status ${response.status}`)
+
+            }
+
+            return response.json();
+
+        })
+
+        .catch(error => {
+
+            alert(error.message)
+
+        })
+
+        .then(response => {
+
+            mostraTempo(response)
+
+        });
+}
+
+function procuraCidade(city) {
+
+    fetch(`${api.base}weather?q=${city}&lang=${api.lang}&units=${api.units}&APPID=${api.key}`)
+        .then(response => {
+
+            if (!response.ok) {
+
+                throw new Error(`http error: status ${response.status}`)
+
+            }
+
+            return response.json();
+
+        })
+
+        .catch(error => {
+
+            alert(error.message)
+
+        })
+
+        .then(response => {
+
+            mostraTempo(response)
+
+        });
+}
+
+function mostraTempo(weather) {
+
+    console.log(weather)
+
+    cidade.innerText = `${weather.name} - ${weather.sys.country}`;
+
+    let nomeIcone = weather.weather[0].icon;
+    container_img.innerHTML = `<img src="./icones/${nomeIcone}.png" class="imagem-tempo">`;
+
+    let temperatura = `${Math.round(weather.main.temp)}`
+    temp_number.innerHTML = temperatura;
+    temp_unit.innerHTML = `°`;
+
+}
+
+function continueNavegando() {
+
+    window.open ("https://noticias.uol.com.br/");
+
+}
+
+function logout() {
+
+    if (window.confirm("Você deseja realmente sair? Clique OK para sair ou Cancelar para permanecer na página") == true) {
+
+        window.location ="index.html";
+
+    } 
+
+}
+
+function login() {
+
+    var done=0;
+    var usuario = document.getElementsById('usuario')[0].value;
+    usuario=usuario.toLowerCase();
+    var senha= document.getElementsByName('senha')[0].value;
+    seha=senha.toLowerCase();
+    if (usuario=="admin" && senha=="admin") {
+        window.location="/p/admin.html";
+        done=1;
+    }
+    if (done==0) { alert("Dados incorretos, tente novamente"); }
+
+}
