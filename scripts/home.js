@@ -204,8 +204,8 @@ function mostraTempo(weather) {
 
     console.log(weather)
 
-    cidade.innerText = `${weather.name} - ${weather.sys.country}`;
-
+    cidade.innerText = `São Paulo - SP`;
+    //cidade.innerText = `${weather.name} - ${weather.sys.country}`; // Exibe o nome da cidade e país puxado pela API
     let nomeIcone = weather.weather[0].icon;
     container_img.innerHTML = `<img src="./icones/${nomeIcone}.png" class="imagem-tempo">`;
 

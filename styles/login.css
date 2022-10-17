@@ -96,11 +96,48 @@ input:-webkit-autofill:focus {
 
 }
 
-.tamanho__icone {
+.icone {
 
     margin-left: .5em;
     width: 20px;
     height: 20px;
+
+}
+
+.icone__usuario-dentro {
+
+    margin-left: 0;
+    position: absolute;
+    top: 27.2vw;
+    left: 33vw;
+
+}
+
+.icone__senha-dentro {
+
+    margin-left: 0;
+    position: absolute;
+    top: 32.7vw;
+    left: 33vw;
+
+}
+
+.borda__erro {
+
+    border-color: var(--cor-amarela);
+
+}
+
+.mensagem-de-erro {
+
+    font-family: var(--fonte-poppins);
+    font-size: 15px;
+    width: 16vw;
+    text-align: center;
+    color: var(--cor-amarela);
+    position: absolute;
+    left: 7.8vw;
+    top: 18.2vw;
 
 }
 
