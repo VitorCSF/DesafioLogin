@@ -1,0 +1,127 @@
+/* Customização da Página, no geral */
+
+
+.cor-de-fundo__login {
+
+    background-image: var(--degrade-preto);
+
+}
+
+.scroll__login {
+
+    overflow-x: hidden;
+    overflow-y: hidden;
+
+} 
+
+.alinhamento__login {
+
+    padding-left: 12.5vw;
+    padding-top: 7vw;
+
+}
+
+/* Estilo do Titulo e Texto do Login */
+
+.titulo__login {
+
+    font-family: var(--fonte-poppins);
+    font-size: 50px;
+
+}
+
+.texto__login {
+
+    font-family: var(--fonte-poppins);
+    font-size: 14px;
+
+}
+
+/* Customização da Imagem do lado Direito */
+
+.imagem__login {
+
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    width: 50vw;
+    height: 50vw;
+
+}
+
+/* Propriedades do input */
+
+input {
+
+    width: 379px;
+    height: 60px;
+    background: transparent;
+    border-radius: 50px;
+    border: 1px solid var(--cor-branca);
+    color: var(--cor-primaria);
+
+}
+
+input::placeholder {
+
+    color: var(--cor-primaria);
+  
+}
+
+input:focus::-webkit-input-placeholder {
+
+    color: transparent;
+
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:focus {
+  transition: background-color 600000s 0s, color 600000s 0s;
+}
+
+/* Customizando todo o Formulário e Ícones */
+
+.margem__superior-form {
+
+    margin-top: 7em;
+    
+}
+
+.rotulo__login {
+
+
+    font-family: var(--fonte-poppins);
+    font-size: 25px;
+
+}
+
+.tamanho__icone {
+
+    margin-left: .5em;
+    width: 20px;
+    height: 20px;
+
+}
+
+.espacamento__texto {
+
+    padding-left: 1em;
+
+}
+
+.margem__botao {
+
+    margin-top: 5em;
+    margin-bottom: 4.4em;
+
+}
+
+.custom__botao-continuar {
+
+    border: 3px solid var(--cor-vermelha);
+    background-image: var(--degrade-vermelho);
+    font-weight: bold;
+    font-family: var(--fonte-poppins);
+
+}

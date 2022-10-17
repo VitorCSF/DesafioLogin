@@ -1,0 +1,398 @@
+/* Estilizando Logo da Compass*/
+
+.logo__compass {
+
+    position: absolute;
+    width: 150px;
+    height: 42.75px;
+    left: 40px;
+    top: 25px;
+
+}
+
+/* Estilo do Header (Cabeçalho)*/
+
+.estilo__cabecalho {
+
+    position: absolute;
+    width: 327px;
+    height: 169px;
+    left: 796px;
+    top: 0px;
+
+}
+
+/* Estilos do Horário/Data */
+
+.estilo__horario {
+
+    color: var(--cor-secundaria);
+    font-family: var(--fonte-poppins);
+    font-style: normal;
+    font-weight: 700;
+    font-size: 120px;
+    line-height: 183px;
+    text-align: center;
+    position: absolute;
+    top: 2vw;
+    left: 38vw;
+    height: 100px;
+    border: none;
+
+}
+
+.estilo__data {
+
+    color: var(--cor-secundaria);
+    font-family: var(--fonte-poppins);
+    font-style: normal;
+    line-height: 18px;
+    position: absolute;
+    text-align: center;
+    font-size: 14px;
+    top: 7.2vw;
+    left: 37.9vw;
+    border: none;
+
+}
+
+/* Removendo o Scroll */
+
+.scroll__home {
+
+   overflow: hidden;
+   background-image: var(--cor-primaria);
+   box-shadow: 4px 4px 70px rgba(0, 0, 0, 0.25);
+   height:0;
+
+}
+
+/* Estilos do Local e Tempo */
+
+.estilo__local-tempo {
+
+    position: absolute;
+    height: 78px;
+    right: 2em;
+    top: 25px;
+    
+}
+
+.estilo__localizacao {
+
+    font-family: var(--fonte-poppins);
+    font-style: normal;
+    line-height: 18px;
+    text-align: center;
+    color: var(--cor-secundaria);
+
+}
+
+.estilo__tempo {
+
+    font-family: var(--fonte-poppins);
+    font-style: normal;
+    font-weight: 700;
+    font-size: 55px;
+    line-height: 61px;
+    text-align: center;
+    color: var(--cor-secundaria);
+    position: absolute;
+    right: 0.1vw;
+    top: .4em;
+
+}
+
+/* Estilizando a Bola Compass*/
+
+.bola__compass {
+
+    position: absolute;
+    width: 375px;
+    height: 500px;
+    top: 15vw;
+
+
+}
+
+/* Estilo geral dos Textos do Conteúdo Principal (Main)*/
+
+.titulo__h2 {
+
+    position: absolute; 
+    left: 79vw;
+    top: 17vw;
+
+    font-family: var(--fonte-poppins);
+    font-style: normal;
+    font-size: 25px;
+    font-weight: 700;
+    text-align: right;
+    color: var(--cor-vermelha);
+
+}
+
+.h1__geral {
+
+    position: absolute;
+
+    font-family: var(--fonte-poppins);
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    text-align: right;
+    color: var(--cor-vermelha);
+
+}
+
+.paragrafo__geral {
+
+    position: absolute;
+    font-family: var(--fonte-poppins);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    text-align: right;
+    color: var(--cor-secundaria);
+
+}
+
+/* Estilos Específicos dos Textos*/
+
+.paragrafo__missao {
+
+    position: absolute;
+    left: 83vw;
+    top: 19vw;
+
+}
+
+.titulo__transformar {
+
+    left: 66.8vw;
+    top: 20.5vw;
+
+}
+
+.paragrafo__transformar {
+
+    left: 80.2vw;
+    top: 22.8vw;
+
+}
+
+.titulo__construindo {
+
+    left: 61.1vw;
+    top: 24.5vw;
+
+}
+
+.paragrafo__construindo {
+
+    left: 74.7vw;
+    top: 26.8vw;
+
+}
+
+.titulo__que-permitam {
+
+    left: 58vw;
+    top: 28.5vw;
+
+}
+
+.paragrafo__que-permitam {
+
+    left: 66.8vw;
+    top: 30.8vw;
+
+}
+
+/* Estilizando geral do Rodapé (Footer)*/
+
+.estilo__rodape {
+
+    z-index: 1;
+    position: absolute;
+    height: 70px;
+    width: 100vw;
+    left: 0px;
+    bottom: 0;
+    background-image: var(--degrade-preto-azulado);
+
+}
+
+/* Estilos da parte esquerda do Rodapé */
+
+.paragrafo__rodape {
+
+    position: absolute;
+    width: 541px;
+    height: 58px;
+    left: 13.5em;
+    top: 1.8em;
+
+    font-family: var(--fonte-nunito);
+    font-style: normal;
+    font-size: 12px;
+    line-height: 15px;
+    text-align: right;
+    color: var(--cor-primaria);
+
+}
+
+.borda__rodape {
+
+    position: absolute;
+    width: 50px;
+    height: 0px;
+    left: 45.5vw;
+    top: 2em;
+
+    border: 1px solid var(--cor-primaria);
+    transform: rotate(90deg);
+
+}
+
+/* Estilizando o Contador*/
+
+.texto__contador {
+
+    position: absolute;
+    width: 109px;
+    height: 49px;
+    left: 53vw;
+    top: 1.5em;
+
+    font-family: var(--fonte-poppins);
+    font-style: normal;
+    font-size: 12px;
+    line-height: 18px;
+    text-align: right;
+    color: var(--cor-primaria);
+
+}
+
+.contador {
+
+    position: absolute;
+    width: 97px;
+    height: 61px;
+    left: 60.5vw;
+
+    font-family: var(--fonte-poppins);
+    font-style: normal;
+    font-weight: 700;
+    font-size: 35px;
+    text-align: center;
+    color: #FFFFFF;
+    border: none;
+
+}
+
+.contagem__segundos {
+
+    position: absolute;
+    width: 55px;
+    height: 18px;
+    left: 61.9vw;
+    top: 4em;
+
+    font-family: var(--fonte-poppins);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 11px;
+    line-height: 18px;
+    text-align: center;
+    color: var(--cor-primaria);
+
+
+}
+
+/* Estilizando os Botões*/
+
+.botao__navegando {
+
+    position: absolute;
+    width: 100px;
+    height: 70px;
+    left: 87vw;
+
+    background: transparent;
+    color: var(--cor-primaria);
+    border: none;
+
+    font-family: var(--fonte-poppins);
+    font-style: normal;
+    font-size: 14px;
+    line-height: 15px;
+    text-align: center;
+
+
+}
+
+.botao__logout {
+
+    position: absolute;
+    width: 100px;
+    height: 70px;
+    left: 93.5vw;
+
+    background: transparent;
+    color: var(--cor-primaria);
+    border: none;
+
+    font-family: var(--fonte-poppins);
+    font-style: normal;
+    font-size: 14px;
+    line-height: 15px;
+    text-align: center;
+
+}
+
+.botao__navegando:hover {
+
+    background-color: var(--cor-branca);
+    color: var(--cor-de-texto-vermelha);
+
+}
+
+.botao__logout:hover {
+
+    background-color: var(--cor-branca);
+    color: var(--cor-de-texto-vermelha);
+
+}
+
+.weather{
+    display: none;
+    font-size: 32px;
+}
+
+.low-high {
+    display: none;
+    font-size: 22px;
+}
+
+.container-img {
+
+    position: absolute;
+    top: 0;
+
+}
+
+.container-temp {
+
+    display: flex;
+
+}
+
+.imagem-tempo {
+
+    width: 50px;
+    position: absolute;
+    right: .2em;
+    top: 1.5em;
+
+}

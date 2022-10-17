@@ -29,6 +29,14 @@ function mostraHora() {
     var hora = data.getHours(); // 00-23
     var min = data.getMinutes(); // 00-59
 
+    // Adiciona um '0' à esquerda para horas de 0 a 10
+
+    if (hora < 10) {
+
+        hora = '0' + hora;  
+
+    }
+
     // Adiciona um '0' à esquerda para minutos de 0 a 10
 
     if (min < 10) {
@@ -223,17 +231,10 @@ function logout() {
 
 }
 
-function login() {
+function carregaFuncao() {
 
-    var done=0;
-    var usuario = document.getElementsById('usuario')[0].value;
-    usuario=usuario.toLowerCase();
-    var senha= document.getElementsByName('senha')[0].value;
-    seha=senha.toLowerCase();
-    if (usuario=="admin" && senha=="admin") {
-        window.location="/p/admin.html";
-        done=1;
-    }
-    if (done==0) { alert("Dados incorretos, tente novamente"); }
+    mostraDia();
+    mostraHora();
+    mostraContador();
 
 }
