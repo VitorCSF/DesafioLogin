@@ -97,6 +97,7 @@ function mostraHora() {
 
         if (window.confirm("Tempo limite excedido! Clique OK para voltar ao Login ou Cancelar para recarregar a página") == true) {
 
+            localStorage.removeItem("logado");
             window.location ="index.html";
 
         } else {
@@ -223,11 +224,13 @@ function continueNavegando() {
 
 function logout() {
 
-    if (window.confirm("Você deseja realmente sair? Clique OK para sair ou Cancelar para permanecer na página") == true) {
+    if (!window.confirm("Você deseja salvar seus dados? Clique OK para Salvar ou Cancelar para recarregar a página")) {
 
-        window.location ="index.html";
+        localStorage.removeItem("logado");
 
     } 
+
+    location.reload();
 
 }
 
