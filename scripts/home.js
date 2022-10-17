@@ -1,5 +1,7 @@
 // Variáveis fora de Função
 
+// Usando API: OpenWeather
+
 const api = {
 
     key: "d4e0cf6f6b30830f37ee58a2a22eac18",
@@ -15,7 +17,6 @@ const container_temp = document.querySelector('.container-temp');
 const temp_number = document.querySelector('.container-temp div');
 const temp_unit = document.querySelector('.container-temp span');
 const weather_t = document.querySelector('.weather');
-
 var contador = 600 + 1;
 
 // Função para mostrar a hora(s) e minuto(s) na tela 
@@ -85,7 +86,7 @@ function mostraHora() {
 
 }
 
-//
+//Função que exibe um contador regressivo começando em 600
   
  function mostraContador(){
 
@@ -112,9 +113,11 @@ function mostraHora() {
 
 }
 
-//
+// Faz a contagem regressiva do contador
 
 var timerContador = setInterval(mostraContador, 1000);
+
+// Verifica se o navegador permite Geolocalização
 
 window.addEventListener('load', () => {
 
@@ -146,6 +149,8 @@ window.addEventListener('load', () => {
     }
 })
 
+// Pega o resultado das Coordenadas
+
 function resultadosCoordenadas(lat, long) {
 
     fetch(`${api.base}weather?lat=${lat}&lon=${long}&lang=${api.lang}&units=${api.units}&APPID=${api.key}`)
@@ -172,6 +177,8 @@ function resultadosCoordenadas(lat, long) {
 
         });
 }
+
+// Procura a localização baseada nas coordenadas
 
 function procuraCidade(city) {
 
@@ -201,12 +208,15 @@ function procuraCidade(city) {
         });
 }
 
+// Mostra a localização e o tempo atual
+
 function mostraTempo(weather) {
 
     console.log(weather)
 
-    cidade.innerText = `São Paulo - SP`;
-    //cidade.innerText = `${weather.name} - ${weather.sys.country}`; // Exibe o nome da cidade e país puxado pela API
+    
+    cidade.innerText = `${weather.name} - ${weather.sys.country}`;
+    //cidade.innerText = `São Paulo - SP`;
     let nomeIcone = weather.weather[0].icon;
     container_img.innerHTML = `<img src="./icones/${nomeIcone}.png" class="imagem-tempo">`;
 
@@ -216,11 +226,15 @@ function mostraTempo(weather) {
 
 }
 
+//Botão que abre uma nova aba no browser para o site de notícias da UOL
+
 function continueNavegando() {
 
     window.open ("https://noticias.uol.com.br/");
 
 }
+
+// Botão que faz pergunta se o usuário deseja continuar logado ou não
 
 function logout() {
 
@@ -233,6 +247,8 @@ function logout() {
     location.reload();
 
 }
+
+// Função que carrega outras no body
 
 function carregaFuncao() {
 

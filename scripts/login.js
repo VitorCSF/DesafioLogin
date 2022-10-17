@@ -39,16 +39,9 @@ function login() {
 
 // Função que insere icone do Usuario ao digitar dentro do input
 
-function usuarioDentro() {
+function iconesDentro() {
 
     usuario_dentro.classList.add('icone__usuario-dentro');
-
-}
-
-// Função que insere icone do Cadeado ao digitar dentro do input
-
-function senhaDentro() {
-
     senha_dentro.classList.add('icone__senha-dentro');
 
 }
